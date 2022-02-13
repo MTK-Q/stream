@@ -30,7 +30,7 @@ HELPABLE = {}
 
 async def initiate_bot():
     with console.status(
-        "[magenta] Booting up The Yukki Music Bot...",
+        "[magenta] جار تمهيد بوت الاغاني ...",
     ) as status:
         console.print("┌ [red]Clearing MongoDB cache...")
         try:
@@ -81,7 +81,7 @@ async def initiate_bot():
         await asyncio.sleep(2.4)
         await startup_delete_last(_____)
     console.print(
-        "[bold green]Congrats!! Yukki Music Bot has started successfully!\n"
+        "[bold green]Congrats!! ANTITHON Music Bot has started successfully!\n"
     )
     try:
         await app.send_message(
@@ -195,11 +195,11 @@ async def initiate_bot():
     console.print(f"\n[red]Stopping Bot")
 
 
-home_text_pm = f"""Hello ,
-My name is {BOT_NAME}.
-I'm Telegram Voice Chat Audio with some useful features.
+home_text_pm = f""" مرحبا ,
+اسمي {BOT_NAME}.
+انا بوت خاص بتشغيل الاغاني في المكالمات .
 
-All commands can be used with: / """
+يمكن استخدام جميع الأوامر مع: / """
 
 
 @app.on_message(filters.command("help") & filters.private)
@@ -264,7 +264,7 @@ async def start_command(_, message):
 📎**Channel Link:** [Visit From Here]({channellink})
 🔗**Video Link:** [Link]({link})
 
-⚡️ __Searched Powered By {BOT_NAME}t__"""
+⚡️ __تم البحث بواسطة {BOT_NAME}t__"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -296,11 +296,11 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name},
+        """مرحبا {first_name},
 
-Click on the buttons for more information.
+انقر على الأزرار لمزيد من المعلومات.
 
-All commands can be used with: /
+يمكن استخدام جميع الأوامر مع: /
 """.format(
             first_name=name
         ),
@@ -322,11 +322,11 @@ async def help_button(client, query):
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
-    top_text = f"""Hello {query.from_user.first_name},
+    top_text = f"""مرحبا {query.from_user.first_name},
 
-Click on the buttons for more information.
+انقر على الأزرار لمزيد من المعلومات.
 
-All commands can be used with: /
+يمكن استخدام جميع الأوامر مع: /
  """
     if mod_match:
         module = mod_match.group(1)
@@ -340,10 +340,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="↪️ رجوع", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="🔄 اغلاق", callback_data="close"
                     ),
                 ],
             ]
