@@ -98,20 +98,20 @@ async def initiate_bot():
         console.print("└ [green]Booted Bot Client")
         console.print("\n┌ [red]Booting Up The Assistant Clients...")
         await ASS_CLI_1.start()
-        console.print("├ [yellow]Booted Assistant Client 1")
+        console.print("├ [yellow]تشغيل حساب مساعد 1")
         await ASS_CLI_2.start()
-        console.print("├ [yellow]Booted Assistant Client 2")
+        console.print("├ [yellow]تشغيل حساب مساعد 2")
         await ASS_CLI_3.start()
-        console.print("├ [yellow]Booted Assistant Client 3")
+        console.print("├ [yellow]تشغيل حساب مساعد 3")
         await ASS_CLI_4.start()
-        console.print("├ [yellow]Booted Assistant Client 4")
+        console.print("├ [yellow]تشغيل حساب مساعد 4")
         await ASS_CLI_5.start()
-        console.print("├ [yellow]Booted Assistant Client 5")
+        console.print("├ [yellow]تشغيل حساب مساعد 5")
         await asyncio.sleep(0.5)
-        console.print("└ [green]Assistant Clients Booted Successfully!")
-        initial = await startup_send_new("Starting Yukki Music Bot...")
+        console.print("└ [green]تم تشغيل حساب مساعد بنجاح !")
+        initial = await startup_send_new("جار بدء تشغيل بوت انتيثون...")
         await asyncio.sleep(0.5)
-        all_over = await startup_send_new("Checking Required Directories...")
+        all_over = await startup_send_new("التحقق من المطلوب ...")
         console.print(
             "\n┌ [red]Checking the existence of Required Directories..."
         )
@@ -123,7 +123,7 @@ async def initiate_bot():
             mkdir("cache")
         if "search" not in listdir():
             mkdir("search")
-        console.print("└ [green]Directories Updated!")
+        console.print("└ [green]المطلوب تم تحديثه!")
         await asyncio.sleep(0.9)
         ___ = await startup_edit_last(
             all_over, "Refurbishing Necessary Data..."

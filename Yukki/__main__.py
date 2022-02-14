@@ -111,7 +111,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_1.join_chat("OfficialYukki")
+        await ASS_CLI_1.join_chat("BU_OQ")
     except:
         pass
     try:
@@ -126,7 +126,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_2.join_chat("OfficialYukki")
+        await ASS_CLI_2.join_chat("BU_OQ")
     except:
         pass
     try:
@@ -141,7 +141,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_3.join_chat("OfficialYukki")
+        await ASS_CLI_3.join_chat("BU_OQ")
     except:
         pass
     try:
@@ -156,7 +156,7 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_4.join_chat("OfficialYukki")
+        await ASS_CLI_4.join_chat("BU_OQ")
     except:
         pass
     try:
@@ -171,13 +171,13 @@ async def initiate_bot():
         console.print(f"\n[red]Stopping Bot")
         return
     try:
-        await ASS_CLI_5.join_chat("OfficialYukki")
+        await ASS_CLI_5.join_chat("BU_OQ")
     except:
         pass
-    console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
-    console.print(f"├[green] ID :- {BOT_ID}!")
-    console.print(f"├[red] Assistant 1 Started as {ASSNAME1}!")
-    console.print(f"├[green] ID :- {ASSID1}!")
+    console.print(f"\n┌[red] تشغيل بوت {BOT_NAME}!")
+    console.print(f"├[green] ايدي :- {BOT_ID}!")
+    console.print(f"├[red] تشغيل حساب مساعد {ASSNAME1}!")
+    console.print(f"├[green] ايدي :- {ASSID1}!")
     console.print(f"├[red] Assistant 2 Started as {ASSNAME2}!")
     console.print(f"├[green] ID :- {ASSID2}!")
     console.print(f"├[red] Assistant 3 Started as {ASSNAME3}!")
