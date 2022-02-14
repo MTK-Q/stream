@@ -1,7 +1,7 @@
 {
-  "name": "Yukki Music Bot",
+  "name": "??? ???????",
   "description": "A Telegram Music Bot with proper functions written in Python with Pyrogram and Py-Tgcalls.",
-  "repository": "https://github.com/NotReallyShikhar/YukkiMusicBot",
+  "repository": "https://github.com/VERSON-2005/stream",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
   "keywords": [
   "python3",
@@ -12,7 +12,7 @@
   "telegram-bot",
   "pyrogram"
   ],
-  "repository": "https://github.com/notreallyshikhar/YukkiMusicBot",
+  "repository": "https://github.com/VERSON-2005/stream",
   "stack": "container",
   "env": {
     "API_ID": {
@@ -31,8 +31,8 @@
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Duration Limit for Playout (In Mins).. Example: 60",
-      "value": "60",
+      "description": "Duration Limit for Playout (In Mins).. Example: 600",
+      "value": "600",
       "required": true
     },
     "ASSISTANT_PREFIX": {
