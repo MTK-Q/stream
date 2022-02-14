@@ -76,18 +76,18 @@ async def welcome(_, message: Message):
                 ) = await get_assistant_details(ran_ass)
                 out = start_pannel()
                 await message.reply_text(
-                    f"Welcome To {MUSIC_BOT_NAME}\n\nPromote me as administrator in your group otherwise I will not function properly.\n\nAssistant Username:- @{ASS_USERNAME}\nAssistant ID:- {ASS_ID}",
+                    f"????? ??  {MUSIC_BOT_NAME}\n\n?? ??????? ?????? ?? ??????? ???? ??? ???? ???? ????.\n\n???? ???? ????? :- @{ASS_USERNAME}\n ???? ???? ?????:- {ASS_ID}",
                     reply_markup=InlineKeyboardMarkup(out[1]),
                 )
             if member.id in ASSIDS:
                 return await remove_active_chat(chat_id)
             if member.id in OWNER_ID:
                 return await message.reply_text(
-                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] has just joined your chat."
+                    f"???? ???? {MUSIC_BOT_NAME} [{member.mention}] ???? ??? ???????."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
-                    f"A member of {MUSIC_BOT_NAME}'s Sudo User[{member.mention}] has just joined your chat."
+                    f"???? ??? ?? ?????? {MUSIC_BOT_NAME} [{member.mention}] ??? ???????."
                 )
             return
         except:
@@ -124,7 +124,7 @@ async def settings(_, message: Message):
     await asyncio.gather(
         message.delete(),
         message.reply_text(
-            f"{text}\n\n**Group:** {message.chat.title}\n**Group ID:** {message.chat.id}\n**Volume Level:** {volume}%",
+            f"{text} \ n \ n ** ????????: ** {message.chat.title} \ n ** ???? ????????: ** {message.chat.id} \ n ** ????? ?????: ** {volume}?",
             reply_markup=InlineKeyboardMarkup(buttons),
         ),
     )
@@ -142,7 +142,7 @@ async def okaybhai(_, CallbackQuery):
 
 @app.on_callback_query(filters.regex("settingm"))
 async def settingm(_, CallbackQuery):
-    await CallbackQuery.answer("Bot Settings ...")
+    await CallbackQuery.answer("??????? ????? ...")
     text, buttons = setting_markup()
     c_title = CallbackQuery.message.chat.title
     c_id = CallbackQuery.message.chat.id
@@ -173,12 +173,12 @@ async def EVE(_, CallbackQuery):
         await CallbackQuery.answer("Changes Saved")
         await add_nonadmin_chat(chat_id)
         await CallbackQuery.edit_message_text(
-            text=f"{text}\n\nAdmins Commands Mode to **Everyone**\n\nNow anyone present in this group can skip, pause, resume, stop music.\n\nChanges Done By @{checking}",
+            text=f"{text} \ n \ n ??? ????? ?????? ??? ** ?????? ** \ n \ n ???? ???? ??? ??? ????? ?? ??? ???????? ???? ???????? ???????? ?????? ?????????? ????????. \ n \ n ?? ????????? ?????? @ {check}",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
         await CallbackQuery.answer(
-            "Commands Mode is Already Set To EVERYONE", show_alert=True
+            "?? ?????? ????? ??? ??????? ??? ??????", show_alert=True
         )
 
 
@@ -191,7 +191,7 @@ async def AMS(_, CallbackQuery):
     is_non_admin = await is_nonadmin_chat(chat_id)
     if not is_non_admin:
         await CallbackQuery.answer(
-            "Commands Mode is Already Set To ADMINS ONLY", show_alert=True
+            "?? ?????? ????? ??? ??????? ??? ADMINS ???", show_alert=True
         )
     else:
         await CallbackQuery.answer("Changes Saved")
